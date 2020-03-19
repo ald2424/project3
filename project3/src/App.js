@@ -1,8 +1,11 @@
 import React from "react";
+import MainNavBar from "./components/MainNavBar"
 
 function App() {
     return (
-      <div>Hello World</div>
+      <div>
+        <MainNavBar />
+      </div>
     );
   }
   

@@ -1,0 +1,7 @@
+html, body, #app, #root>div {
+    height: 100%
+  }
+.fullH{
+    height: 100%;
+    
+}
