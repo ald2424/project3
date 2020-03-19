@@ -1,0 +1,13 @@
+.width{
+    width: 17%;
+    height: 100%;  
+}
+.pad{
+    padding-top: 90%;
+}
+ul li:hover{
+    font-size: large;
+    color: black;
+    outline: 1px solid black;
+}
+
