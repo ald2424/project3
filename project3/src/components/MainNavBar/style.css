@@ -1,13 +1,27 @@
 .width{
-    width: 17%;
+    width: 13%;
     height: 100%;  
 }
 .pad{
-    padding-top: 90%;
+    padding-top: 25%;
 }
 ul li:hover{
     font-size: large;
     color: black;
     outline: 1px solid black;
 }
+@media screen and (max-width: 600px) {
+    .response {
+      font-size: 15px;
+    }
+    .width{
+        width: 25%;
+        height: 100%;
+    }
 
+    ul li:hover{
+        font-size: medium;
+        color: black;
+        outline: 1px solid black;
+    }
+  }
