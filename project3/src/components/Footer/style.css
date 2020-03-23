@@ -8,4 +8,7 @@
     width: 100%;
     position: relative;
   }
+#stickyFooter{
+  flex-shrink: none;
+}
   
