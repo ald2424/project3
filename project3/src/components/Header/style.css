@@ -1,0 +1,15 @@
+.float{
+    float: left;
+}
+.fonts{
+    padding-top: 5%;
+    font-family: 'Great Vibes', cursive;
+    font-size: 10em;
+    font-style: italic;
+}
+.smFonts{
+    padding-top: 5%;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    font-style: italic;
+}
