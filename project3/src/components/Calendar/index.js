@@ -7,7 +7,7 @@ function Calendar() {
     <div className="elegant-calencar">
       <p id="reset">reset</p>
       <div id="header" className="clearfix">
-        <div className="pre-button"></div>
+        <div className="pre-button"> &#60; </div>
         <div className="head-info">
           <div className="head-day"></div>
           <div className="head-month"></div>
