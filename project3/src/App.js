@@ -8,6 +8,8 @@ import Lessons from "./pages/Lessons";
 import Horses from "./pages/MeetTheHorses";
 import Login from "./pages/Login";
 import Calendar from "./components/Calendar";
+import StudentForm from "./pages/StudentLogin";
+import InstructorForm from "./pages/InstructorLogin";
 
 function App() {
     return (
@@ -21,6 +23,8 @@ function App() {
         <Route exact path='/lessons' component={Lessons} />
         <Route exact path='/horses' component={Horses} />
         <Route exact path='/login' component={Login} />
+        <Route exact path='/studentform' component={StudentForm} />
+        <Route exact path='/instructorform' component={InstructorForm} />
         </Switch>
         <Footer />
       </div>
