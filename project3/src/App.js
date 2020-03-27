@@ -18,7 +18,6 @@ function App() {
       <div>
         <MainNavBar />
         <Header />
-        <Calendar />
         <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/lessons' component={Lessons} />
