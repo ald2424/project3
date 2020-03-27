@@ -4,7 +4,7 @@ function Horses(props){
 
     return(
         <div className="container mx-auto">
-           <div className="mx-auto text-center">
+           <div className="mx-auto text-center p-3">
              <div className="">
                  <img src={props.image} alt="Horse"  height="300" width="350"/>
                  <div className="caption">

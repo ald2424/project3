@@ -4,7 +4,12 @@ import jabez from "../assets/images/Jabez.jpg"
 import naomi from "../assets/images/Naomi.jpg"
 import ruth from "../assets/images/Ruth.jpg"
 import mercy from "../assets/images/Mercy.jpg"
-
+import Esther from "../assets/images/Esther.jpg"
+import Boaz from "../assets/images/Boaz.jpg"
+import Lucas from "../assets/images/Lucas.jpg"
+import Selah from "../assets/images/Selah.jpg"
+import Slater from "../assets/images/Slater.jpg"
+import Levi from "../assets/images/Levi.jpg"
 const horses = [
     {
         "name" : "Moses",
@@ -29,6 +34,30 @@ const horses = [
     {
         "name" : "Mercy",
         "image" : mercy
+    },
+    {
+        "name" : "Esther",
+        "image": Esther
+    },
+    {
+        "name": "Boaz",
+        "image": Boaz
+    },
+    {
+        "name": "Lucas",
+        "image": Lucas
+    },
+    {
+        "name": "Selah",
+        "image": Selah
+    },
+    {
+        "name": "Levi",
+        "image": Levi
+    },
+    {
+        "name": "Slater",
+        "image": Slater
     },
 ]
 

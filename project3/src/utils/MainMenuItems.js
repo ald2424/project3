@@ -1,13 +1,13 @@
 const menuItems = [
 {
+     "path": "/",
+    "href": "Home.js",
+    "title": "Home"
+},
+{
     "path": "/login",
     "href": "Login.js",
     "title": "Log In"
-},
-{
-    "path": "/",
-    "href": "Home.js",
-    "title": "Home"
 },
 {
     "path": "/lessons",
