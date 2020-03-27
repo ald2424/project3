@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import MainNavBar from "./components/MainNavBar";
+//import MainNavBar from "./components/MainNavBar";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home";
@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Calendar from "./components/Calendar";
 import StudentForm from "./pages/StudentLogin";
 import InstructorForm from "./pages/InstructorLogin";
+import MainNavBar from "./components/MenuPropFunction"
 
 function App() {
     return (
