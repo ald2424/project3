@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css"
 import history from "../utils/history"
+import loginForm from "../../src/components/loginForm/index"
 
 function Login(){
 

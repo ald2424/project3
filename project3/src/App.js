@@ -11,6 +11,7 @@ import Calendar from "./components/Calendar";
 import StudentForm from "./pages/StudentLogin";
 import InstructorForm from "./pages/InstructorLogin";
 import MainNavBar from "./components/MenuPropFunction"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     return (
