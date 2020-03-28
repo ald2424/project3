@@ -1,9 +1,10 @@
 import React from "react";
+import InstructorForm from "../components/loginForm"
 
 function Form(){
     return(
         <div>
-            <h1>Student Login Page</h1>
+            <InstructorForm />
         </div>
     )
 }
