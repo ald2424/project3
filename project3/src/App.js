@@ -25,7 +25,7 @@ function App() {
         <Route exact path='/horses' component={Horses} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/studentform' component={StudentForm} />
-        <Route exact path='/instructorform' component={InstructorForm} />
+        {/* <Route exact path='/instructorform' component={InstructorForm} /> */}
         </Switch>
         <Footer />
       </div>
