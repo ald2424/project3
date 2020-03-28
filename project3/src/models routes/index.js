@@ -3,11 +3,28 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
 const app = express();
+const db = require("../../models")
 
 mongoose.Promise = global.Promise;
 mongoose.connect(
   process.env.MONGODB_URI || `mongodb://localhost:27017/node-react-starter`
 );
+
+
+
+db.Instructor.create({
+  name: "Abby",
+  email: "abigaild2424@gmail.com",
+  password: "password"
+}).then (dbInstructor => {
+  console.log(dbInstructor)
+}).catch(({ message }) => {
+  console.log(message);
+});
+
+
+
+
 
 app.use(bodyParser.json());
 
