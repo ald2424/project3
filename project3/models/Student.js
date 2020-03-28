@@ -13,6 +13,9 @@ const studentSchema = new Schema ({
         required: true,
         unique: true
       },
+      attending:{
+          type: Boolean
+      },
       lessons: [
           {
           type: Schema.Types.ObjectId,
