@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { Button, FormGroup, FormControl} from "react-bootstrap";
 import "./style.css";
 
 export default function Login(props) {
@@ -18,7 +18,7 @@ export default function Login(props) {
     <div className="Login">
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="email" bsSize="large">
-          <ControlLabel>Email</ControlLabel>
+          <h3>Email</h3>
           <FormControl
             autoFocus
             type="email"
@@ -27,7 +27,7 @@ export default function Login(props) {
           />
         </FormGroup>
         <FormGroup controlId="password" bsSize="large">
-          <ControlLabel>Password</ControlLabel>
+          <h3>Password</h3>
           <FormControl
             value={password}
             onChange={e => setPassword(e.target.value)}
