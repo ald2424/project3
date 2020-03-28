@@ -7,36 +7,36 @@ const keys = require("../../config/keys");
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 // Load User model
-const Instructor = require("../../models/Instructor");
+const Student = require("../../models/Student");
 
 // *****************************REGISTER ROUTE*****************************
 // @route POST api/users/register
 // @desc Register user
 // @access Public
-router.post("/instructorregister", (req, res) => {
+router.post("/studentregister", (req, res) => {
   // Form validation
 const { errors, isValid } = validateRegisterInput(req.body);
 // Check validation
   if (!isValid) {
     return res.status(400).json(errors);
   }
-Instructor.findOne({ email: req.body.email }).then(instructor => {
-    if (instructor) {
+Student.findOne({ email: req.body.email }).then(student => {
+    if (student) {
       return res.status(400).json({ email: "Email already exists" });
     } else {
-      const newInstructor = new Instructor({
+      const newStudent = new Student({
         name: req.body.name,
         email: req.body.email,
         password: req.body.password
       });
 // Hash password before saving in database
       bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(newInstructor.password, salt, (err, hash) => {
+        bcrypt.hash(newStudent.password, salt, (err, hash) => {
           if (err) throw err;
-          newInstructor.password = hash;
-          newInstructor
+          newStudent.password = hash;
+          newStudent
             .save()
-            .then(instructor => res.json(instructor))
+            .then(student => res.json(student))
             .catch(err => console.log(err));
         });
       });
@@ -48,7 +48,7 @@ Instructor.findOne({ email: req.body.email }).then(instructor => {
 // @route POST api/users/login
 // @desc Login user and return JWT token
 // @access Public
-router.post("/instructorlogin", (req, res) => {
+router.post("/studentlogin", (req, res) => {
   // Form validation
 const { errors, isValid } = validateLoginInput(req.body);
 // Check validation
@@ -58,19 +58,19 @@ const { errors, isValid } = validateLoginInput(req.body);
 const email = req.body.email;
   const password = req.body.password;
 // Find user by email
-  Instructor.findOne({ email }).then(instructor => {
+  Student.findOne({ email }).then(student => {
     // Check if user exists
-    if (!instructor) {
+    if (!student) {
       return res.status(404).json({ emailnotfound: "Email not found" });
     }
 // Check password
-    bcrypt.compare(password, instructor.password).then(isMatch => {
+    bcrypt.compare(password, student.password).then(isMatch => {
       if (isMatch) {
         // User matched
         // Create JWT Payload
         const payload = {
-          id: instructor.id,
-          name: instructor.name
+          id: student.id,
+          name: student.name
         };
 // Sign token
         jwt.sign(
