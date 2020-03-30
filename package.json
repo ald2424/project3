@@ -1,50 +1,14 @@
 {
-<<<<<<< HEAD
-  "name": "project3",
+  "name": "mern-auth",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "concurrently": "^5.1.0",
-    "express": "^4.17.1",
-    "is-empty": "^1.2.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.6",
-    "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0",
-    "react-router-dom": "^5.1.2",
-    "validator": "^13.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
-  },
+  "description": "Mern Auth Example",
+  "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ald2424/project3.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ald2424/project3/issues"
-  },
-  "homepage": "https://github.com/ald2424/project3#readme"
-=======
-  "name": "mern-auth",
-  "version": "1.0.0",
-  "description": "Mern Auth Example",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js"
   },
   "author": "",
   "license": "MIT",
@@ -60,5 +24,4 @@
     "passport-jwt": "^4.0.0",
     "validator": "^10.9.0"
   }
->>>>>>> 55c5d9572031ff101172f85f80392c6997318b90
 }
