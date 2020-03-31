@@ -5,7 +5,7 @@ import './style.css';
 
 
 
-function mainNavBar(props){
+function MainNavBar(props){
     
     return(
       
@@ -21,4 +21,4 @@ function mainNavBar(props){
     )
 }
 
-export default mainNavBar
+export default MainNavBar
