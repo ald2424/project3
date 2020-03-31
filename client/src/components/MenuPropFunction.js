@@ -2,10 +2,11 @@ import React from 'react';
 import menuItems from "../utils/MainMenuItems";
 import Menu from "./MainNavBar/index";
 import logo from '../assets/images/sheaRoseLogo.png'
+import "../App.css";
 
 function renderMenuItems(){
     return (
-        <div className="width response bg-danger border border-bottom-0 border-dark">
+        <div className="width response bg-danger border border-bottom-0 border-dark ">
             <div className="p-3 my-4 dFlex">
                 <img src={logo} className="img-fluid m-auto d-block" height="180" width="180"/>
             </div>
