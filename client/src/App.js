@@ -79,7 +79,7 @@ function App() {
           <PrivateRoute exact path="/instructordashboard" component={InstructorDashboard} />
           </Switch>
           </div>
-          </ Router>
+          </Router>
           <Footer />
           </Provider>
         </div>
