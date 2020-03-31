@@ -8,8 +8,8 @@ import Lessons from "./pages/Lessons";
 import Horses from "./pages/MeetTheHorses";
 import LoginPage from "./pages/Login";
 import Calendar from "./components/Calendar";
-import StudentForm from "./pages/StudentLogin";
 import InstructorForm from "./pages/InstructorLogin";
+import StuForm from "./pages/StudentForm";
 import MainNavBar from "./components/MenuPropFunction"
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -74,9 +74,8 @@ function App() {
           <Route exact path='/lessons' component={Lessons} />
           <Route exact path='/horses' component={Horses} />
           <Route exact path='/login' component={LoginPage} />
-          <Route exact path='/studentform' component={StudentForm} />
           <Route exact path='/instructorform' component={InstructorForm} />
-
+          <Route exact path='/studentform' component={StuForm} />
           <PrivateRoute exact path="/instructordashboard" component={InstructorDashboard} />
           <PrivateRoute exact path="/studentdashboard" component={StudentDashboard} />
 

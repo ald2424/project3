@@ -1,5 +1,5 @@
 import React from "react";
-import InstructorForm from "../components/loginForm"
+import InstructorForm from "../components/loginForm";
 
 function Form(){
     return(
