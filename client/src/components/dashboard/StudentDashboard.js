@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import "./dashboard.css";
-import StudentNavBar from "../StudentNavBar";
-import Calendar from "../Calendar";
 
 class StudentDashboard extends Component {
   onLogoutClick = e => {
@@ -14,30 +12,32 @@ class StudentDashboard extends Component {
 
   render() {
     const { user } = this.props.auth;
-
     return (
-      <div>
-        <StudentNavBar />
-        <h1>Hey there,</h1> {user.name.split(" ")[0]}
-        <div className="col s12 center-align">
-          <Calendar />
-        </div>
-        <div style={{ height: "75vh" }} className="container valign-wrapper">
-          <div className="row">
-            <div className="col s12 center-align">
-              <button
-                style={{
-                  width: "150px",
-                  borderRadius: "3px",
-                  letterSpacing: "1.5px",
-                  marginTop: "1rem"
-                }}
-                onClick={this.onLogoutClick}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-              >
-                Logout
-              </button>
-            </div>
+      <div style={{ height: "75vh" }} className="container mx-auto mt-5 pt-5">
+        <div className="row">
+          <div className="col s12 center-align">
+            <h4 className="font">Welcome {user.name.split(" ")[0]}!</h4>
+
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link text-dark active" href="#">
+                  Announcements
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">
+                  Schedule
+                </a>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link text-dark btn-link"
+                  onClick={this.onLogoutClick}
+                >
+                  Logout
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
