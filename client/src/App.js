@@ -26,6 +26,7 @@ import store from "./store";
 //import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import InstructorDashboard from "./components/dashboard/InstructorDashboard.js";
+import StudentDashboard from "./components/dashboard/StudentDashboard";
 
 //Check for token to keep user logged in
  if (localStorage.jwtToken) {
@@ -77,6 +78,8 @@ function App() {
           <Route exact path='/instructorform' component={InstructorForm} />
 
           <PrivateRoute exact path="/instructordashboard" component={InstructorDashboard} />
+          <PrivateRoute exact path="/studentdashboard" component={StudentDashboard} />
+
           </Switch>
           </div>
           </Router>
