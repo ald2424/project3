@@ -45,7 +45,7 @@ function Horses(){
         </div>
     </div>
     <div className="row text-center">
-        <div className="col-md-4">
+        <div className="col-sm-4">
              <div className="">
                  <img src={naomi} alt="Lights"  height="300" width="300"/>
                  <div className="caption">
@@ -53,7 +53,7 @@ function Horses(){
                  </div>
             </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-sm-4">
             <div className="">
              <img src={ruth} alt="Lights"  height="300" width="300"/>
              <div className="caption">
@@ -61,7 +61,7 @@ function Horses(){
              </div>
             </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-sm-4">
             <div className="">
              <img src={mercy} alt="Lights"  height="300" width="300"/>
              <div className="caption">
@@ -71,7 +71,7 @@ function Horses(){
         </div>
     </div>
     <div className="row text-center">
-        <div className="col-md-4">
+        <div className="col-sm-4">
              <div className="">
                  <img src={Esther} alt="Lights"  height="300" width="300"/>
                  <div className="caption">
@@ -79,7 +79,7 @@ function Horses(){
                  </div>
             </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-sm-4">
             <div className="">
              <img src={Boaz} alt="Lights"  height="300" width="300"/>
              <div className="caption">
@@ -87,7 +87,7 @@ function Horses(){
              </div>
             </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-sm-4">
             <div className="">
              <img src={Lucas} alt="Lights"  height="300" width="300"/>
              <div className="caption">
@@ -97,7 +97,7 @@ function Horses(){
         </div>
     </div>
     <div className="row text-center">
-        <div className="col-md-4">
+        <div className="col-sm-4">
              <div className="">
                  <img src={Selah} alt="Lights"  height="300" width="300"/>
                  <div className="caption">
@@ -105,7 +105,7 @@ function Horses(){
                  </div>
             </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-sm-4">
             <div className="">
              <img src={Levi} alt="Lights"  height="300" width="300"/>
              <div className="caption">
@@ -113,7 +113,7 @@ function Horses(){
              </div>
             </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-sm-4">
             <div className="">
              <img src={Slater} alt="Lights"  height="300" width="300"/>
              <div className="caption">
