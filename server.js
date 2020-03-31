@@ -21,8 +21,8 @@ const db = require("./config/keys").mongoURI;
 // Connect to MongoDB
 mongoose
   .connect(
-   // db,
-   "mongodb://localhost/shearosefarm",
+   db,
+  //  "mongodb://localhost/shearosefarm",
     { useNewUrlParser: true }
   )
   .then(() => console.log("MongoDB successfully connected"))

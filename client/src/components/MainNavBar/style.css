@@ -3,9 +3,9 @@
     min-height: 100%;  
     float: left;
 }
-.pad{
+/* .pad{
     padding-top: 25%;
-}
+} */
 ul li:hover{
     font-size: large;
     color: black;
