@@ -15,12 +15,12 @@ const Student = require("../../models/Student");
 // @access Public
 router.post("/studentregister", (req, res) => {
   // Form validation
-const { errors, isValid } = validateRegisterInput(req.body);
-// Check validation
+  const { errors, isValid } = validateRegisterInput(req.body);
+  // Check validation
   if (!isValid) {
     return res.status(400).json(errors);
   }
-Student.findOne({ email: req.body.email }).then(student => {
+  Student.findOne({ email: req.body.email }).then(student => {
     if (student) {
       return res.status(400).json({ email: "Email already exists" });
     } else {
@@ -29,7 +29,7 @@ Student.findOne({ email: req.body.email }).then(student => {
         email: req.body.email,
         password: req.body.password
       });
-// Hash password before saving in database
+      // Hash password before saving in database
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newStudent.password, salt, (err, hash) => {
           if (err) throw err;
@@ -50,20 +50,20 @@ Student.findOne({ email: req.body.email }).then(student => {
 // @access Public
 router.post("/studentlogin", (req, res) => {
   // Form validation
-const { errors, isValid } = validateLoginInput(req.body);
-// Check validation
+  const { errors, isValid } = validateLoginInput(req.body);
+  // Check validation
   if (!isValid) {
     return res.status(400).json(errors);
   }
-const email = req.body.email;
+  const email = req.body.email;
   const password = req.body.password;
-// Find user by email
+  // Find user by email
   Student.findOne({ email }).then(student => {
     // Check if user exists
     if (!student) {
       return res.status(404).json({ emailnotfound: "Email not found" });
     }
-// Check password
+    // Check password
     bcrypt.compare(password, student.password).then(isMatch => {
       if (isMatch) {
         // User matched
@@ -72,7 +72,7 @@ const email = req.body.email;
           id: student.id,
           name: student.name
         };
-// Sign token
+        // Sign token
         jwt.sign(
           payload,
           keys.secretOrKey,

@@ -17,10 +17,10 @@ class StudentDashboard extends Component {
 
     return (
       <div>
-        <StudentNavBar />
+        {/* <StudentNavBar /> */}
         <h1>Hey there,</h1> {user.name.split(" ")[0]}
         <div className="col s12 center-align">
-          <Calendar />
+          {/* <Calendar /> */}
         </div>
         <div style={{ height: "75vh" }} className="container valign-wrapper">
           <div className="row">
