@@ -13,6 +13,9 @@ const InstructorSchema = new Schema({
   password: {
     type: String,
     required: true
+  },
+  admin: {
+    type: Boolean
   }
 });
 module.exports = Instructor = mongoose.model("instructors", InstructorSchema);
