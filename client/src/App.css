@@ -6,3 +6,20 @@
 .pad{
     padding-left: 200px;
 }
+
+@media screen and (max-width: 600px) {
+    .pad {
+      font-size: 15px;
+      padding-left: 50px;
+    }
+    .width{
+        width: 25%;
+        height: 100%;
+    }
+
+    ul li:hover{
+        font-size: medium;
+        color: black;
+        outline: 1px solid black;
+    }
+  }

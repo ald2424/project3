@@ -10,6 +10,11 @@ class InstructorDashboard extends Component {
     this.props.logoutUser();
   };
 
+    openStudentSignIn() {
+    window.location.replace("/studentsignup");
+    // window.location.reload(false);
+  }
+
   render() {
     const { user } = this.props.auth;
     return (
@@ -23,22 +28,22 @@ class InstructorDashboard extends Component {
            
            
            
-               <ul class="nav nav-tabs">
-                <li class="nav-item">
-                  <a class="nav-link text-dark active" href="#">Announcements</a>
+               <ul className="nav nav-tabs">
+                <li className="nav-item">
+                  <a className="nav-link text-dark active" href="#">Announcements</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark" href="#">Student Signup</a>
+                <li className="nav-item">
+                 <button className="nav-link text-dark btn-link" onClick={this.openStudentSignIn}>Student Sign Up</button>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark" href="#">Schedule</a>
+                <li className="nav-item">
+                  <a className="nav-link text-dark" href="#">Schedule</a>
                 </li>
                 {/* <li class="nav-item">
                   <a class="nav-link disabled" href="#">Logout</a>
                 </li> */}
 
-                <li class="nav-item">
-                  <button class="nav-link text-dark btn-link" onClick={this.onLogoutClick}>Logout</button>
+                <li className="nav-item">
+                  <button className="nav-link text-dark btn-link" onClick={this.onLogoutClick}>Logout</button>
                 </li>
               </ul>
            
