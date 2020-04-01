@@ -8,18 +8,18 @@ import {
   USER_LOADING
 } from "./types";
 
-// Register User
-// export const registerUser = (userData, history) => dispatch => {
-//   axios
-//     .post("/api/users/register", userData)
-//     .then(res => history.push("/login")) // re-direct to login on successful register
-//     .catch(err =>
-//       dispatch({
-//         type: GET_ERRORS,
-//         payload: err.response.data
-//       })
-//     );
-// };
+//Register User
+export const registerUser = (userData, history) => dispatch => {
+  axios
+    .post("/api/student/studentregister", userData)
+    .then(res => history.push("/studentdashboard")) // re-direct to login on successful register
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
 
 // Login - get user token
 export const loginUser = userData => dispatch => {

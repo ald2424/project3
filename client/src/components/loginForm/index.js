@@ -26,7 +26,7 @@ class Login extends Component {
   componentWillReceiveProps(nextProps) {
      console.log(nextProps)
     if (nextProps.auth.isAuthenticated) {
-      //console.log(this.state);
+      console.log(nextProps);
       // nextProps.history.push("/dashboard"); // push user to dashboard when they login
       window.location.replace("/instructordashboard");
     }
@@ -115,7 +115,7 @@ class Login extends Component {
                     marginTop: "1rem"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn btn-large waves-effect waves-light hoverable bg-danger text-light accent-3 mb-5"
                 >
                   Login
                 </button>

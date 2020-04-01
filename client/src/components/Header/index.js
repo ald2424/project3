@@ -12,7 +12,7 @@ function Header(){
             <div className="">
                 <h1 className="text-center fonts">Shea Rose Farm</h1>
                 <div className="p-3 my-4 m-auto">
-                    <img src={logo} className="img-fluid m-auto d-block" height="250" width="250"/>
+                    <img src={logo} className="img-fluid m-auto d-block res" height="250" width="250"/>
                 </div>                
             </div>
         </div>

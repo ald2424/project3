@@ -33,6 +33,11 @@ function Login(){
                     </div>
                 </div>
             </div>
+            <div className="row">
+                <div className="col-sm-12">
+                    <p className="text-center m-5 pb-5">Please contact your instructor if you do not have a student log in!</p>
+                </div>
+            </div>
         </div>
     )
 }

@@ -4,6 +4,7 @@ import "../App.css"
 function Lessons(){
     return (
         <div className="px-5">
+            <div className="pl-5">
             <h2 className="smFonts text-center">Lessons</h2>
             <h3>Instructors</h3>
             <ul>
@@ -30,6 +31,7 @@ function Lessons(){
                 <li>$50.00 per lesson for one (1) hour group.</li>
                 <li>$90.00 per lesson for one (1) hour private/ $60 semi-private.</li>
             </ul>
+            </div>
         </div>
     )
 }

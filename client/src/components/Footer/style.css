@@ -9,6 +9,7 @@
     position: relative;
     border-top: 2px solid lightgray;
     z-index: 0;
+    
   }
 #stickyFooter{
   flex-shrink: none;

@@ -13,3 +13,21 @@
     font-size: 3em;
     font-style: italic;
 }
+
+@media screen and (max-width: 600px) {
+    .fonts {
+        padding-top: 5%;
+        font-family: 'Great Vibes', cursive;
+        font-size: 5em;
+        font-style: italic;
+    }
+    .width{
+        width: 25%;
+        height: 100%;
+    }
+
+    .res{
+        height: 200px;
+        width: 200px;
+    }
+  }
