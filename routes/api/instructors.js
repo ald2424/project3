@@ -15,21 +15,22 @@ const Instructor = require("../../models/Instructor");
 // @access Public
 router.post("/instructorregister", (req, res) => {
   // Form validation
-const { errors, isValid } = validateRegisterInput(req.body);
-// Check validation
+  const { errors, isValid } = validateRegisterInput(req.body);
+  // Check validation
   if (!isValid) {
     return res.status(400).json(errors);
   }
-Instructor.findOne({ email: req.body.email }).then(instructor => {
+  Instructor.findOne({ email: req.body.email, admin: req.body.admin }).then(instructor => {
     if (instructor) {
       return res.status(400).json({ email: "Email already exists" });
     } else {
       const newInstructor = new Instructor({
         name: req.body.name,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        admin: req.body.admin
       });
-// Hash password before saving in database
+      // Hash password before saving in database
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newInstructor.password, salt, (err, hash) => {
           if (err) throw err;
@@ -50,20 +51,21 @@ Instructor.findOne({ email: req.body.email }).then(instructor => {
 // @access Public
 router.post("/instructorlogin", (req, res) => {
   // Form validation
-const { errors, isValid } = validateLoginInput(req.body);
-// Check validation
+  const { errors, isValid } = validateLoginInput(req.body);
+  // Check validation
   if (!isValid) {
     return res.status(400).json(errors);
   }
-const email = req.body.email;
+  const email = req.body.email;
   const password = req.body.password;
-// Find user by email
-  Instructor.findOne({ email }).then(instructor => {
+  const admin = req.body.admin;
+  // Find user by email
+  Instructor.findOne({ email, admin }).then(instructor => {
     // Check if user exists
     if (!instructor) {
       return res.status(404).json({ emailnotfound: "Email not found" });
     }
-// Check password
+    // Check password
     bcrypt.compare(password, instructor.password).then(isMatch => {
       if (isMatch) {
         // User matched
@@ -72,7 +74,7 @@ const email = req.body.email;
           id: instructor.id,
           name: instructor.name
         };
-// Sign token
+        // Sign token
         jwt.sign(
           payload,
           keys.secretOrKey,

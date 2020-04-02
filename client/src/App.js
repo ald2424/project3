@@ -25,8 +25,7 @@ import store from "./store";
 // import Register from "./components/auth/Register";
 //import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
-import InstructorDashboard from "./components/dashboard/InstructorDashboard.js";
-import StudentDashboard from "./components/dashboard/StudentDashboard";
+import Dashboard from "./components/dashboard";
 import StudentSignUp from "./components/StudentSignUp/studentsignup"
 
 //Check for token to keep user logged in
@@ -78,8 +77,7 @@ function App() {
           <Route exact path='/studentform' component={StudentForm} />
           <Route exact path='/instructorform' component={InstructorForm} />
 
-          <PrivateRoute exact path="/instructordashboard" component={InstructorDashboard} />
-          <PrivateRoute exact path="/studentdashboard" component={StudentDashboard} />
+          <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <PrivateRoute exact path="/studentsignup" component={StudentSignUp} />
 
           </Switch>
