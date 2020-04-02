@@ -23,6 +23,11 @@ const menuItems = [
     "path": "/dashboard",
     "href": "index.js",
     "title": "Dashboard"
+},
+{
+    "path": "/contactus",
+    "href": "ContactUs.js",
+    "title": "ContactUs"
 }
 ]
 
