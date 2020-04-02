@@ -12,8 +12,7 @@ import Lucas from "../assets/images/Lucas.jpg"
 import Selah from "../assets/images/Selah.jpg"
 import Slater from "../assets/images/Slater.jpg"
 import Levi from "../assets/images/Levi.jpg"
-import HorseImages from "../components/horseImages";
-import horse from "../utils/Horses";
+
 function Horses(){
     return(
    <div className="container">
@@ -127,12 +126,3 @@ function Horses(){
 }
 export default Horses;
 
-{/* <div className="container m-auto p-5">
-    <h1 className="smFonts text-center">Meet the Horses</h1>
-
-        {horse.map(horse => (
-            <HorseImages 
-            name={horse.name}
-            image={horse.image}
-            />
-        ))} */}
