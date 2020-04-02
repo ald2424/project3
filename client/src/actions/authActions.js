@@ -11,8 +11,8 @@ import {
 //Register User
 export const registerUser = (userData, history) => dispatch => {
   axios
-    .post("/api/user/userregister", userData)
-    .then(res => history.push("/instructordashboard")) // re-direct to login on successful register
+    .post("/api/users/register", userData)
+    .then(res => history.push("/dashboard")) // re-direct to login on successful register
     .catch(err =>
       dispatch({
         type: GET_ERRORS,

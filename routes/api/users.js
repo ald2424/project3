@@ -20,11 +20,11 @@ router.post("/register", (req, res) => {
   if (!isValid) {
     return res.status(400).json(errors);
   }
-  Instructor.findOne({ email: req.body.email, admin: req.body.admin }).then(instructor => {
+  User.findOne({ email: req.body.email, admin: req.body.admin }).then(instructor => {
     if (instructor) {
       return res.status(400).json({ email: "Email already exists" });
     } else {
-      const newInstructor = new Instructor({
+      const newInstructor = new User({
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
