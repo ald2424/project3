@@ -10,7 +10,7 @@ import LoginPage from "./pages/Login";
 import Calendar from "./components/Calendar";
 import StudentForm from "./pages/StudentLogin";
 import InstructorForm from "./pages/InstructorLogin";
-import MainNavBar from "./components/MenuPropFunction"
+import MainNavBar from "./utils/MenuPropFunction"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import jwt_decode from "jwt-decode";

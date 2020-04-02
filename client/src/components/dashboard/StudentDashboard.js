@@ -13,28 +13,29 @@ class StudentDashboard extends Component {
   render() {
     const { user } = this.props.auth;
     return (
-      <div>
-        {/* <StudentNavBar /> */}
-        <h1>Hey there,</h1> {user.name.split(" ")[0]}
+      <div style={{ height: "75vh" }} className="container mx-auto mt-5 pt-5">
+      <div className="row">
         <div className="col s12 center-align">
-          {/* <Calendar /> */}
-        </div>
-        <div style={{ height: "75vh" }} className="container valign-wrapper">
-          <div className="row">
-            <div className="col s12 center-align">
-              <button
-                style={{
-                  width: "150px",
-                  borderRadius: "3px",
-                  letterSpacing: "1.5px",
-                  marginTop: "1rem"
-                }}
-                onClick={this.onLogoutClick}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-              >
-                Logout
-              </button>
-            </div>
+          <h4 className="font">
+            Welcome {user.name.split(" ")[0]}!
+            
+          </h4>
+         
+         
+         
+             <ul className="nav nav-tabs">
+              <li className="nav-item">
+                <a className="nav-link text-dark active" href="#">Announcements</a>
+              </li>
+              
+              <li className="nav-item">
+                <a className="nav-link text-dark" href="#">Schedule</a>
+              </li>
+              
+              <li className="nav-item">
+                <button className="nav-link text-dark btn-link" onClick={this.onLogoutClick}>Logout</button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
