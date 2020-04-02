@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { registerUser } from "../../actions/authActions";
+import { registerContact } from "../../actions/authActions";
 import classnames from "classnames";
 
 class ContactUsForm extends Component {
@@ -11,9 +11,8 @@ class ContactUsForm extends Component {
     this.state = {
       name: "",
       email: "",
-      password: "",
-      password2: "",
-      admin: false,
+      phone: "",
+      message: "",
       errors: {}
     };
   }
@@ -33,15 +32,14 @@ class ContactUsForm extends Component {
   onSubmit = e => {
     e.preventDefault();
 
-    const newUser = {
+    const newContact = {
       name: this.state.name,
       email: this.state.email,
-      password: this.state.password,
-      password2: this.state.password2,
-      admin: false
+      phone: this.state.phone,
+      message: this.state.message
     };
 
-    this.props.registerUser(newUser, this.props.history);
+    this.props.registerContact(newContact, this.props.history);
   };
 
   render() {
@@ -50,18 +48,6 @@ class ContactUsForm extends Component {
       <div className="container">
         <div className="row">
           <div className="col s8 offset-s2">
-            <Link to="/" className="btn-flat waves-effect">
-              <i className="material-icons left">keyboard_backspace</i> Back to
-              home
-            </Link>
-            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
-                <b>Register</b> below
-              </h4>
-              <p className="grey-text text-darken-1">
-                Already have an account? <Link to="/login">Log in</Link>
-              </p>
-            </div>
             <form noValidate onSubmit={this.onSubmit}>
               <div className="input-field col s12">
                 <input
@@ -94,30 +80,30 @@ class ContactUsForm extends Component {
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
-                  value={this.state.password}
-                  error={errors.password}
-                  id="password"
-                  type="password"
+                  value={this.state.phone}
+                  error={errors.phone}
+                  id="phone"
+                  type="text"
                   className={classnames("", {
-                    invalid: errors.password
+                    invalid: errors.phone
                   })}
                 />
-                <label htmlFor="password">Password</label>
-                <span className="red-text">{errors.password}</span>
+                <label htmlFor="phone">Phone Number</label>
+                <span className="red-text">{errors.phone}</span>
               </div>
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
-                  value={this.state.password2}
-                  error={errors.password2}
-                  id="password2"
-                  type="password"
+                  value={this.state.message}
+                  error={errors.message}
+                  id="message"
+                  type="text"
                   className={classnames("", {
-                    invalid: errors.password2
+                    invalid: errors.message
                   })}
                 />
-                <label htmlFor="password2">Confirm Password</label>
-                <span className="red-text">{errors.password2}</span>
+                <label htmlFor="message">Brief Message</label>
+                <span className="red-text">{errors.message}</span>
               </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
@@ -142,11 +128,9 @@ class ContactUsForm extends Component {
 }
 ContactUsForm.propTypes = {
   registerUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({
-  auth: state.auth,
   errors: state.errors
 });
-export default connect(mapStateToProps, { registerUser })(withRouter(ContactUsForm));
+export default connect(mapStateToProps, { registerContact })(withRouter(ContactUsForm));
