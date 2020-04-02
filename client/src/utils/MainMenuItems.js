@@ -18,6 +18,11 @@ const menuItems = [
     "path": "/horses",
     "href": "MeetTheHorses.js",
     "title": "Meet the Horses"
+},
+{
+    "path": "/dashboard",
+    "href": "index.js",
+    "title": "Dashboard"
 }
 ]
 
