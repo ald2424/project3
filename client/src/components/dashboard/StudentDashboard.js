@@ -3,18 +3,15 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import "./dashboard.css";
-import StudentNavBar from "../StudentNavBar";
-import Calendar from "../Calendar";
 
 class StudentDashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
     this.props.logoutUser();
   };
-
+  
   render() {
     const { user } = this.props.auth;
-
     return (
       <div>
         {/* <StudentNavBar /> */}
@@ -45,7 +42,7 @@ class StudentDashboard extends Component {
   }
 }
 
-StudentDashboard.propTypes = {
+  StudentDashboard.propTypes = {
   logoutUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
 };
@@ -54,4 +51,7 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(mapStateToProps, { logoutUser })(StudentDashboard);
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(StudentDashboard);
