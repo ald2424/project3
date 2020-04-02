@@ -12,15 +12,21 @@
 ## User Story
 
 AS A horseback rider at Shea Rose Farm,
+
 I WANT to access a user-friendly website for students and instructors
+
 SO THAT everyone can utilize the farm's resources to their best advantage.
 
 GIVEN I am an instructor,
+
 WHEN I want to add or delete an Announcement,
+
 THEN I sign in to the website and register a student in the appropriate tab.
 
 GIVEN I am a student,
+
 WHEN I want to view announcements,
+
 THEN I log in to the website under the Student Dashboard.
 
 ## How To Use
