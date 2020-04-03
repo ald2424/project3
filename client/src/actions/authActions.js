@@ -24,7 +24,7 @@ export const registerUser = (userData, history) => dispatch => {
 //Register Contact for ContactUs
 export const registerContact = (userData, history) => dispatch => {
   axios
-    .post("/api/contacts", userData)
+    .post("/api/contacts/contactus", userData)
     .then(res => history.push("/")); // re-direct to home on successful register
   };
 
