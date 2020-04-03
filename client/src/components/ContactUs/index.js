@@ -15,13 +15,6 @@ class ContactUsForm extends Component {
     };
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   console.log(nextProps);
-  //    // nextProps.history.push("/dashboard"); // push user to dashboard when they login
-  //    window.location.replace("/");
-  //  }
-
-
   onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
@@ -38,8 +31,9 @@ class ContactUsForm extends Component {
 
     this.props.registerContact(userData);
     console.log(userData);
-    alert("Info submitted...")
-  }
+    alert("Info submitted...");
+    window.location.replace("/");
+  };
 
   render() {
     return (
@@ -105,9 +99,11 @@ class ContactUsForm extends Component {
   }
 }
 ContactUsForm.propTypes = {
-  registerContact: PropTypes.func.isRequired,
+  registerContact: PropTypes.func.isRequired
 };
 const mapStateToProps = state => ({
   errors: state.errors
 });
-export default connect(mapStateToProps, { registerContact })(withRouter(ContactUsForm));
+export default connect(mapStateToProps, { registerContact })(
+  withRouter(ContactUsForm)
+);
