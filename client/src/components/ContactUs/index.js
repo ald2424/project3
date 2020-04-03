@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerContact } from "../../actions/authActions";
+import classnames from "classnames";
 
 class ContactUsForm extends Component {
   constructor() {
@@ -11,8 +12,16 @@ class ContactUsForm extends Component {
       name: "",
       email: "",
       phone: "",
-      message: ""
+      message: "",
     };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({
+        errors: nextProps.errors
+      });
+    }
   }
 
   onChange = e => {
@@ -99,7 +108,8 @@ class ContactUsForm extends Component {
   }
 }
 ContactUsForm.propTypes = {
-  registerContact: PropTypes.func.isRequired
+  registerContact: PropTypes.func.isRequired,
+  errors: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({
   errors: state.errors
