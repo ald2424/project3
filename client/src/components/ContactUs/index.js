@@ -15,11 +15,11 @@ class ContactUsForm extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
-     // nextProps.history.push("/dashboard"); // push user to dashboard when they login
-     window.location.replace("/");
-   }
+  // componentWillReceiveProps(nextProps) {
+  //   console.log(nextProps);
+  //    // nextProps.history.push("/dashboard"); // push user to dashboard when they login
+  //    window.location.replace("/");
+  //  }
 
 
   onChange = e => {
@@ -38,6 +38,7 @@ class ContactUsForm extends Component {
 
     this.props.registerContact(userData);
     console.log(userData);
+    alert("Info submitted...")
   }
 
   render() {
