@@ -14,4 +14,22 @@
 #stickyFooter{
   flex-shrink: none;
 }
+
+.social-container {
+  background: rgb(255, 255, 255);
+  padding: 25px 50px;
+}
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+a.social:hover {
+  transform: translateY(-2px);
+}
+a.facebook {
+  color: #4968ad;
+}
+
+
   
