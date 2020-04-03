@@ -13,7 +13,12 @@ class InstructorDashboard extends Component {
     openStudentSignIn() {
     window.location.replace("/studentsignup");
     // window.location.reload(false);
-  }
+  };
+
+  openMessageBoard() {
+    window.location.replace("/messageboard");
+    // window.location.reload(false);
+  };
 
   render() {
     const { user } = this.props.auth;
@@ -38,10 +43,9 @@ class InstructorDashboard extends Component {
                 <li className="nav-item">
                   <a className="nav-link text-dark" href="#">Schedule</a>
                 </li>
-                {/* <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Logout</a>
-                </li> */}
-
+                <li className="nav-item">
+                 <button className="nav-link text-dark btn-link" onClick={this.openMessageBoard}>Message Board</button>
+                </li>
                 <li className="nav-item">
                   <button className="nav-link text-dark btn-link" onClick={this.onLogoutClick}>Logout</button>
                 </li>

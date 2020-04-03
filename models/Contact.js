@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+
 // Create Schema
 const ContactSchema = new Schema({
   name: {
@@ -11,12 +12,16 @@ const ContactSchema = new Schema({
     required: true
   },
   phone: {
-    type: Integer,
+    type: String,
     required: true
   },
   message: {
     type: String,
     required: true
+  },
+  date: {
+    type: Date,
+    default: Date.now
   }
 });
 module.exports = Contact = mongoose.model("contacts", ContactSchema);

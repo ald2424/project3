@@ -13,7 +13,6 @@ class ContactUsForm extends Component {
       email: "",
       phone: "",
       message: "",
-      errors: {}
     };
   }
 
@@ -32,78 +31,60 @@ class ContactUsForm extends Component {
   onSubmit = e => {
     e.preventDefault();
 
-    const newContact = {
+    const userData = {
       name: this.state.name,
       email: this.state.email,
       phone: this.state.phone,
       message: this.state.message
     };
 
-    this.props.registerContact(newContact, this.props.history);
+    this.props.registerContact(userData);
+    console.log(userData);
+    alert("Thank you for your submission. You should hear from us shortly!!!");
+    window.location.replace("/");
   };
 
   render() {
-    const { errors } = this.state;
     return (
       <div className="container">
         <div className="row">
           <div className="col s8 offset-s2">
-            <form noValidate onSubmit={this.onSubmit}>
+            <form onSubmit={this.onSubmit}>
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
                   value={this.state.name}
-                  error={errors.name}
                   id="name"
                   type="text"
-                  className={classnames("", {
-                    invalid: errors.name
-                  })}
                 />
                 <label htmlFor="name">Name</label>
-                <span className="red-text">{errors.name}</span>
               </div>
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
                   value={this.state.email}
-                  error={errors.email}
                   id="email"
                   type="email"
-                  className={classnames("", {
-                    invalid: errors.email
-                  })}
                 />
                 <label htmlFor="email">Email</label>
-                <span className="red-text">{errors.email}</span>
               </div>
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
                   value={this.state.phone}
-                  error={errors.phone}
                   id="phone"
                   type="text"
-                  className={classnames("", {
-                    invalid: errors.phone
-                  })}
                 />
                 <label htmlFor="phone">Phone Number</label>
-                <span className="red-text">{errors.phone}</span>
               </div>
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
                   value={this.state.message}
-                  error={errors.message}
                   id="message"
                   type="text"
-                  className={classnames("", {
-                    invalid: errors.message
-                  })}
                 />
                 <label htmlFor="message">Brief Message</label>
-                <span className="red-text">{errors.message}</span>
               </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
@@ -114,7 +95,7 @@ class ContactUsForm extends Component {
                     marginTop: "1rem"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable bg-danger text-light accent-3 mb-5"
+                  className="btn btn-large waves-effect waves-light hoverable grey accent-3"
                 >
                   Submit
                 </button>
@@ -127,10 +108,12 @@ class ContactUsForm extends Component {
   }
 }
 ContactUsForm.propTypes = {
-  registerUser: PropTypes.func.isRequired,
+  registerContact: PropTypes.func.isRequired,
   errors: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({
   errors: state.errors
 });
-export default connect(mapStateToProps, { registerContact })(withRouter(ContactUsForm));
+export default connect(mapStateToProps, { registerContact })(
+  withRouter(ContactUsForm)
+);
