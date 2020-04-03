@@ -15,12 +15,13 @@ ul li:hover{
     display: flex;
     flex-direction: column;
 }
+
 @media screen and (max-width: 600px) {
     .response {
       font-size: 15px;
     }
     .width{
-        width: 25%;
+        width: 29%;
         height: 100%;
     }
 

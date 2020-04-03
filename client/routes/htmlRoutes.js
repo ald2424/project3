@@ -1,3 +1,3 @@
-import loginForm from "./containers/loginForm";
+// import loginForm from "./containers/loginForm";
 
-<Route path="/login" exact component={loginForm} />
+// <Route path="/login" exact component={loginForm} />
