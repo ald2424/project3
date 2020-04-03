@@ -18,6 +18,7 @@ function renderMenuItems(){
                     title={item.title}
                 />
             ))}
+            
             </ul>
         </div>
     )

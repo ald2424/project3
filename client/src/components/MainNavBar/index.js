@@ -6,7 +6,7 @@ import './style.css';
 
 
 function MainNavBar(props){
-    
+
     return(
       
         <div>
