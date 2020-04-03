@@ -1,12 +1,20 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
-// import Announcements from "../utils/Announcements"
-import InstAnnouncements from "../components/InstAnnouncements";
+import InstEditAnnouncements from "../components/InstEditAnnouncements";
 
 function InstructorAnnouncements() {
+
+
+
+
+
+
+
+
+
+    
     return (
         <div>
-            <InstAnnouncements />
+            <InstEditAnnouncements />
         </div>
     )
 }

@@ -6,7 +6,7 @@ const AnnouncementsSchema = new Schema({
         type: String,
         required: true
       },
-      info: {
+      message: {
         type: String,
         required: true
       }

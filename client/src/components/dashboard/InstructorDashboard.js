@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import "./dashboard.css";
-import "../InstAnnouncements";
-import InstructorAnnouncements from "../../pages/InstructorAnnouncements";
+import "../InstEditAnnouncements";
 
 
 class InstructorDashboard extends Component {
@@ -16,6 +15,14 @@ class InstructorDashboard extends Component {
     openStudentSignIn() {
     window.location.replace("/studentsignup");
     // window.location.reload(false);
+  };
+
+    openAnnouncements() {
+      window.location.replace("/editAnnouncements");
+  };
+
+    openViewAnnouncements() {
+      window.location.replace("/viewAnnouncements");
   };
 
   render() {
@@ -33,7 +40,10 @@ class InstructorDashboard extends Component {
            
                <ul className="nav nav-tabs">
                 <li className="nav-item">
-                  <a className="nav-link text-dark active" href="/editAnnouncements">Announcements</a>
+                  <button className="nav-link text-dark active" onClick={this.openAnnouncements}>Edit Announcements</button>
+                </li>
+                <li className="nav-item">
+                  <button className="nav-link text-dark active" onClick={this.openViewAnnouncements}>View Announcements</button>
                 </li>
                 <li className="nav-item">
                  <button className="nav-link text-dark btn-link" onClick={this.openStudentSignIn}>Student Sign Up</button>

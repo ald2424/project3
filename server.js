@@ -6,7 +6,7 @@ const passport = require("passport");
 
 const instructors = require("./routes/api/instructors");
 const students = require("./routes/api/student");
-
+const announcements = require("./routes/api/announcements");
 
 const app = express();
 // Bodyparser middleware
@@ -36,8 +36,8 @@ require("./config/passport")(passport);
 //const port = process.env.PORT || 5000;
 //app.listen(port, () => console.log(`Server up and running on port ${port} !`));
 app.use("/api/instructors", instructors);
-app.use("/api/student", students)
-
+app.use("/api/student", students);
+app.use("/api/announcements", announcements);
 
 // // ******NOTES FOR POSTMAN***********
 // //route for instructor register: localhost:5000/api/instructors/instructorregister

@@ -1,9 +1,9 @@
-const Announcements = [
-    {
-        "path": "/editAnnouncements",
-        "href": "InstructorAnnouncements.js",
-        "title": "Announcements"
-    }
-]
+// const Announcements = [
+//     {
+//         "path": "/editAnnouncements",
+//         "href": "InstructorAnnouncements.js",
+//         "title": "Announcements"
+//     }
+// ]
 
-export default Announcements;
+// export default Announcements;
