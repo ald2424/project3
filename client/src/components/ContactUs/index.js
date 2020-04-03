@@ -31,7 +31,7 @@ class ContactUsForm extends Component {
 
     this.props.registerContact(userData);
     console.log(userData);
-    alert("Info submitted...");
+    alert("Thank you for your submission. You should hear from us shortly!!!");
     window.location.replace("/");
   };
 
