@@ -114,7 +114,7 @@ class ContactUsForm extends Component {
                     marginTop: "1rem"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn btn-large waves-effect waves-light hoverable bg-danger text-light accent-3 mb-5"
                 >
                   Submit
                 </button>
