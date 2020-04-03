@@ -20,6 +20,7 @@ import store from "./store";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard";
 import StudentSignUp from "./components/StudentSignUp/studentsignup";
+import MessageBoard from "./components/MessageBoard";
 import ContactUs from "./components/ContactUs";
 
 //Check for token to keep user logged in
@@ -60,7 +61,7 @@ function App() {
 
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <PrivateRoute exact path="/studentsignup" component={StudentSignUp} />
-
+          <PrivateRoute exact path="/messageboard" component={MessageBoard} />
           </Switch>
           </div>
           </Router>

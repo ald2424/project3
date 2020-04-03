@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-// Load Validation model for contactus.js 
+// Load Validation model for contactus.js
 const validateContactUsInput = require("../../validation/contactus");
 
 // Load Contact model
@@ -28,5 +28,13 @@ router.post("/contactus", (req, res) => {
       console.log(message);
     });
 });
+
+// Contact.find({})
+//   .then(dbContact => {
+//     res.json(dbContact);
+//   })
+//   .catch(err => {
+//     res.json(err);
+//   });
 
 module.exports = router;
