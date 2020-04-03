@@ -20,11 +20,7 @@ const menuItems = [
     "href": "MeetTheHorses.js",
     "title": "Meet the Horses"
 },
-// {
-//     "path": "/dashboard",
-//     "href": "index.js",
-//     "title": "Dashboard"
-// }
+
 ]
 
 export default menuItems;
