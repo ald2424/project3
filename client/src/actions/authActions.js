@@ -24,15 +24,14 @@ export const registerUser = (userData, history) => dispatch => {
 //Register Contact for ContactUs
 export const registerContact = (userData, history) => dispatch => {
   axios
-    .post("/api/contact/register", userData)
-    .then(res => history.push("/")) // re-direct to login on successful register
+    .post("/api/contacts/register", userData)
+    .then(res => history.push("/")) // re-direct to home on successful register
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
-        payload: err.response.data
       })
     );
-};
+  };
 
 
 // Login - get user token
