@@ -40,8 +40,15 @@ class ContactUsForm extends Component {
 
     this.props.registerContact(userData);
     console.log(userData);
-    alert("Thank you for your submission. You should hear from us shortly!!!");
-    window.location.replace("/");
+    if(this.state.name != "" && this.state.email != "" && this.state.phone != "" & this.state.message != ""){
+      alert("Thank you for your submission. You should hear from us shortly!!!");
+      window.location.replace("/");
+    }
+    else{
+      
+      alert("Please fill out each item in the form!");
+
+    }
   };
 
   render() {

@@ -25,7 +25,7 @@ module.exports = function validateContactUsInput(data) {
   }
   // Phone # checks
   if (!Validator.isLength(data.phone, { min: 10, max: 10 })) {
-    errors.phone = "Phone Number must be at least 10 numbers...";
+    errors.phone = "Please enter a valid phone number...";
   }
 
   return {
