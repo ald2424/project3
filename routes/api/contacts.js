@@ -9,7 +9,8 @@ router.post("/", (req, res) => {
         name: req.body.name,
         email: req.body.email,
         phone: req.body.phone,
-        message: req.body.message
+        message: req.body.message,
+        date: req.body.date
     }).then(dbContact => {
         console.log(dbContact);
     }).catch(({ message }) => {

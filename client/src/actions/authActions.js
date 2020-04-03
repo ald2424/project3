@@ -26,11 +26,6 @@ export const registerContact = (userData, history) => dispatch => {
   axios
     .post("/api/contacts", userData)
     .then(res => history.push("/")); // re-direct to home on successful register
-    // .catch(err =>
-    //   dispatch({
-    //     type: GET_ERRORS,
-    //   })
-    // );
   };
 
 
