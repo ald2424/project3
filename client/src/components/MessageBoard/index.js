@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 
-class MessageBoard extends Component {
+class List extends Component {
   render() {
     return (
       <div className="container">
@@ -13,4 +13,4 @@ class MessageBoard extends Component {
   }
 }
 
-export default MessageBoard;
+export default List;
