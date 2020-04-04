@@ -4,10 +4,13 @@
 
 ## Description
 
+An organized business is one of the key factors to making it run successfully.The Shea Rose Farm website was re-created to update an existing application, making it more user-friendly for the students, instructors, and anyone wanting to learn more. 
 
+## Deployment
 
-## Link to Deployed Application
-[Shea Rose Farm Website](url)
+This application was deployed using Heroku and mLab technologies.
+
+[Shea Rose Farm Website](https://arcane-savannah-81285.herokuapp.com/)
 
 ## User Story
 
@@ -29,55 +32,47 @@ WHEN I want to view announcements,
 
 THEN I log in to the website under the Student Dashboard.
 
-## How To Use
+## Technology Used
 
-In the project directory, you can run:
+* React 
+* Express.js 
+* Node.js
+* JavaScript 
+* CSS
+* Axios 
+* Nodemon 
+* Passport
+* MongoDB
+* Mongoose
+* Materialize
+* Bootstrap
 
-npm start
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser.
+## Authors
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-npm test
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
-
-npm run build
-Builds the app for production to the build folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
-
-See the section about deployment for more information.
-
-npm run eject
-Note: this is a one-way operation. Once you eject, you can’t go back!
-
-If you aren’t satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Code Style
-
-
+* Abigail DeVries ***Full Stack Web Develoer***
+[Abby's Portfolio](https://ald2424.github.io/portfolio/)
+* Meredith Grimes ***Full Stack Web Develoer***
+[Meredith's Portfolio](https://magrimes.github.io/CreativePortfolio/)
+* Greg Roberts ***Full Stack Web Develoer***
+[Greg's Portfolio](https://mighty-taiga-15406.herokuapp.com/)
+* Cleveland Pitt Jr. ***Full Stack Web Develoer***
+[Cleveland's Portfolio](https://clevelandjr.github.io/updatedportfolio/)
 
 ## Future Development 
 
-A schedule feature where students can request extra lessons, remove themselves from a future lesson, or view upcoming events
-Enhance Announcements so instructors can choose who views
-Email notifications to students when a new announcement is posted
-Allow students and instructors to update their information
-Add a profile for all users
+* A schedule feature where students can request extra lessons, remove themselves from a future lesson, or view upcoming events
 
+* Enhance Announcements so instructors can choose who views
 
-## Credits
+* Email notifications to students when a new announcement is posted
 
+* Allow students and instructors to update their information
 
+* Add a profile for all users
+
+* Display messages left in MessageBoard
+
+* Add admin page for app maintenance
 
 ## License 
 
