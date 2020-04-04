@@ -14,7 +14,7 @@ import InstructorForm from "./pages/InstructorLogin";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ViewAnnouncements from "./pages/ViewAnnouncementsPage";
 import Wrapper from "./components/Wrapper";
-
+import Schedule from "./pages/Schedule";
 import MainNavBar from "./utils/MenuPropFunction";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
@@ -72,6 +72,7 @@ function App() {
                   component={InstructorForm}
                 />
                 <Route exact path="/contactus" component={ContactUs} />
+                <Route exact path="/schedule" component={Schedule} />
 
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 <PrivateRoute
