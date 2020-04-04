@@ -10,6 +10,10 @@ class StudentDashboard extends Component {
     this.props.logoutUser();
   };
   
+  openViewAnnouncements() {
+    window.location.replace("/viewAnnouncements");
+  };
+
   render() {
     const { user } = this.props.auth;
     return (
@@ -25,7 +29,7 @@ class StudentDashboard extends Component {
          
              <ul className="nav nav-tabs">
               <li className="nav-item">
-                <a className="nav-link text-dark active" href="#">Announcements</a>
+                <a className="nav-link text-dark active" onClick={this.openViewAnnouncements} href="#">Announcements</a>
               </li>
               
               <li className="nav-item">

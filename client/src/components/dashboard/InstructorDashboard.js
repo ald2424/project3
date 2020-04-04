@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import "./dashboard.css";
+import "../InstEditAnnouncements";
+
 
 class InstructorDashboard extends Component {
   onLogoutClick = e => {
@@ -13,6 +15,14 @@ class InstructorDashboard extends Component {
     openStudentSignIn() {
     window.location.replace("/studentsignup");
     // window.location.reload(false);
+  };
+
+    openAnnouncements() {
+      window.location.replace("/editAnnouncements");
+  };
+
+  openViewAnnouncements() {
+    window.location.replace("/viewAnnouncements");
   };
 
   openMessageBoard() {
@@ -35,7 +45,10 @@ class InstructorDashboard extends Component {
            
                <ul className="nav nav-tabs">
                 <li className="nav-item">
-                  <a className="nav-link text-dark active" href="#">Announcements</a>
+                  <button className="nav-link text-dark active" onClick={this.openAnnouncements}>Edit Announcements</button>
+                </li>
+                <li className="nav-item">
+                  <button className="nav-link text-dark active" onClick={this.openViewAnnouncements}>View Announcements</button>
                 </li>
                 <li className="nav-item">
                  <button className="nav-link text-dark btn-link" onClick={this.openStudentSignIn}>Student Sign Up</button>
@@ -50,27 +63,6 @@ class InstructorDashboard extends Component {
                   <button className="nav-link text-dark btn-link" onClick={this.onLogoutClick}>Logout</button>
                 </li>
               </ul>
-           
-           
-           
-           
-           
-           
-           
-           
-           
-            {/* <button
-              style={{
-                width: "150px",
-                borderRadius: "3px",
-                letterSpacing: "1.5px",
-                marginTop: "1rem"
-              }}
-              onClick={this.onLogoutClick}
-              className="btn btn-large waves-effect waves-light hoverable bg-danger font-weight-bold text-light accent-3"
-            >
-              Logout
-            </button> */}
           </div>
         </div>
       </div>
