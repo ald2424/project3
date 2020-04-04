@@ -38,7 +38,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "NODE_ENV=test",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:5000",
