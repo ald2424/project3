@@ -29,12 +29,15 @@ router.post("/contactus", (req, res) => {
     });
 });
 
-// Contact.find({})
-//   .then(dbContact => {
-//     res.json(dbContact);
-//   })
-//   .catch(err => {
-//     res.json(err);
-//   });
+router.get("/messageboard", (req,res) => { 
+  Contact.find({})
+  .then(dbContact => {
+    res.json(dbContact);
+  })
+  .catch(err => {
+    res.json(err);
+  });
+})
+
 
 module.exports = router;
