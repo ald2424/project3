@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import MessageList from "./index";
 import { renderContacts } from "../../actions/authActions";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import "./style.css";
 
 class MessageResultsContainer extends Component {
@@ -53,4 +55,18 @@ class MessageResultsContainer extends Component {
   }
 }
 
-export default MessageResultsContainer;
+MessageResultsContainer.propTypes = {
+    renderContacts: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+  };
+  
+  const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+  });
+  
+  export default connect(
+    mapStateToProps,
+    { renderContacts }
+  )(MessageResultsContainer);
+
