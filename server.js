@@ -28,7 +28,8 @@ const db = require("./config/keys").mongoURI;
 //   .catch(err => console.log(err));
 
 // var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/shearosefarm"
-mongoose.connect(db || "mongodb+srv://dbUser:dbUserPassword@shearosefarm-gsjx6.mongodb.net/test?retryWrites=true&w=majority");
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://dbUser:Passw0rd@ds133418.mlab.com:33418/heroku_s62f6pkg");
 if(process.env.NODE_ENV === "production"){
   app.use(express.static("client/build"));
 
