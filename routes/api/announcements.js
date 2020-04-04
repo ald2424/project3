@@ -6,6 +6,7 @@ const Announcements = require("../../models/Announcements");
 
 // Getting announcements
 router.get("/", (req, res) => {
+    console.log(req)
     Announcements.find({}) .then(function (data) {
         res.json(data)
     })
