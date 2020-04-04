@@ -39,11 +39,24 @@ THEN I log in to the website under the Student Dashboard.
 
 ## Future Development 
 
+A schedule feature where students can request extra lessons, remove themselves from a future lesson, or view upcoming events
+
+Enhance Announcements so instructors can choose who views
+
+Email notifications to students when a new announcement is posted
+
+Allow students and instructors to update their information
+
+Add a profile for all users
+
+Display messages left in MessageBoard
+
+Add admin page for app maintenance
 
 
 ## Credits
 
-
+Teachers, TA's, Tutors and Family
 
 ## License 
 
