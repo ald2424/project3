@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MessageList from "./index";
 import { renderContacts } from "../../actions/authActions";
+import "./style.css";
 
 class MessageResultsContainer extends Component {
   constructor() {
@@ -43,6 +44,9 @@ class MessageResultsContainer extends Component {
   render() {
     return (
       <div className="container">
+        <div className="header">
+          <h1>Incoming Messages!!!</h1>
+        </div>
         <MessageList />
       </div>
     );

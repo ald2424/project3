@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css"
+import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -13,8 +13,9 @@ import StudentForm from "./pages/StudentLogin";
 import InstructorForm from "./pages/InstructorLogin";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ViewAnnouncements from "./pages/ViewAnnouncementsPage";
+import Wrapper from "./components/Wrapper";
 
-import MainNavBar from "./utils/MenuPropFunction"
+import MainNavBar from "./utils/MenuPropFunction";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
@@ -53,32 +54,53 @@ if (localStorage.jwtToken) {
 function App() {
   return (
     <div>
-      <Provider store={store}>
-        <Router>
-          <MainNavBar />
-          <div className="pad">
-            <Header />
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route exact path='/lessons' component={Lessons} />
-              <Route exact path='/horses' component={Horses} />
-              <Route exact path='/login' component={LoginPage} />
-              <Route exact path='/studentform' component={StudentForm} />
-              <Route exact path='/instructorform' component={InstructorForm} />
-              <Route exact path='/contactus' component={ContactUs} />
+      <Wrapper>
+        <Provider store={store}>
+          <Router>
+            <MainNavBar />
+            <div className="pad">
+              <Header />
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/lessons" component={Lessons} />
+                <Route exact path="/horses" component={Horses} />
+                <Route exact path="/login" component={LoginPage} />
+                <Route exact path="/studentform" component={StudentForm} />
+                <Route
+                  exact
+                  path="/instructorform"
+                  component={InstructorForm}
+                />
+                <Route exact path="/contactus" component={ContactUs} />
 
-              <PrivateRoute exact path="/dashboard" component={Dashboard} />
-              <PrivateRoute exact path="/studentsignup" component={StudentSignUp} />
-              <PrivateRoute exact path="/editAnnouncements" component={InstEditAnnouncements} />
-              <PrivateRoute exact path="/viewAnnouncements" component={ViewAnnouncements} />
-              <PrivateRoute exact path="/messageboard" component={MessageBoard} />
-            </Switch>
-          </div>
-        </Router>
-        <Footer />
-      </Provider>
+                <PrivateRoute exact path="/dashboard" component={Dashboard} />
+                <PrivateRoute
+                  exact
+                  path="/studentsignup"
+                  component={StudentSignUp}
+                />
+                <PrivateRoute
+                  exact
+                  path="/editAnnouncements"
+                  component={InstEditAnnouncements}
+                />
+                <PrivateRoute
+                  exact
+                  path="/viewAnnouncements"
+                  component={ViewAnnouncements}
+                />
+                <PrivateRoute
+                  exact
+                  path="/messageboard"
+                  component={MessageBoard}
+                />
+              </Switch>
+            </div>
+          </Router>
+          <Footer />
+        </Provider>
+      </Wrapper>
     </div>
-
   );
 }
 
