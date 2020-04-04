@@ -27,7 +27,10 @@ mongoose
   .catch(err => console.log(err));
 
 // var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/shearosefarm"
-// mongoose.connect(MONGODB_URI);
+mongoose.connect(db || "mongodb+srv://dbUser:dbUserPassword@shearosefarm-gsjx6.mongodb.net/test?retryWrites=true&w=majority");
+if(process.env.NODE_ENV === "production"){
+  app.use(express.static("client/build"));
+}
 // Routes
 app.use("/api/users", users);
 app.use("/api/contacts", contacts);
