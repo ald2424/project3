@@ -28,7 +28,7 @@ import InstEditAnnouncements from "./components/InstEditAnnouncements";
 
 import Dashboard from "./components/dashboard";
 import StudentSignUp from "./components/StudentSignUp/studentsignup";
-import MessageBoard from "./components/MessageBoard";
+import MessageBoard from "./components/MessageBoard/MessageResults";
 import ContactUs from "./components/ContactUs";
 
 //Check for token to keep user logged in

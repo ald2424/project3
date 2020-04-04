@@ -37,7 +37,6 @@ router.get("/messageboard", (req,res) => {
   .catch(err => {
     res.json(err);
   });
-})
-
+});
 
 module.exports = router;

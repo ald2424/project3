@@ -79,3 +79,15 @@ export const logoutUser = () => dispatch => {
   dispatch(setCurrentUser({}));
   window.location.reload();
 };
+
+export const renderContacts = (userData, history) => dispatch => {
+  axios
+    .post("/api/contacts/contactus", userData)
+    .then(res => history.push("/messageboard")) // re-direct to home on successful register
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
