@@ -4,10 +4,13 @@
 
 ## Description
 
+An organized business is one of the key factors to making it run successfully.The Shea Rose Farm website was re-created to update an existing application, making it more user-friendly for the students, instructors, and anyone wanting to learn more. 
 
+## Deployment
 
-## Link to Deployed Application
-[Shea Rose Farm Website](url)
+This application was deployed using Heroku and mLab technologies.
+
+[Shea Rose Farm Website](https://arcane-savannah-81285.herokuapp.com/)
 
 ## User Story
 
@@ -29,21 +32,47 @@ WHEN I want to view announcements,
 
 THEN I log in to the website under the Student Dashboard.
 
-## How To Use
+## Technology Used
 
+* React 
+* Express.js 
+* Node.js
+* JavaScript 
+* CSS
+* Axios 
+* Nodemon 
+* Passport
+* MongoDB
+* Mongoose
+* Materialize
+* Bootstrap
 
+## Authors
 
-## Code Style
-
-
+* Abigail DeVries ***Full Stack Web Develoer***
+[Abby's Portfolio](https://ald2424.github.io/portfolio/)
+* Meredith Grimes ***Full Stack Web Develoer***
+[Meredith's Portfolio](https://magrimes.github.io/CreativePortfolio/)
+* Greg Roberts ***Full Stack Web Develoer***
+[Greg's Portfolio](https://mighty-taiga-15406.herokuapp.com/)
+* Cleveland Pitt Jr. ***Full Stack Web Develoer***
+[Cleveland's Portfolio](https://clevelandjr.github.io/updatedportfolio/)
 
 ## Future Development 
 
+* A schedule feature where students can request extra lessons, remove themselves from a future lesson, or view upcoming events
 
+* Enhance Announcements so instructors can choose who views
 
-## Credits
+* Email notifications to students when a new announcement is posted
 
+* Allow students and instructors to update their information
 
+* Add a profile for all users
+
+* Display messages left in MessageBoard
+
+* Add admin page for app maintenance
 
 ## License 
 
