@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import './style.css';
 
 function MainNavBar(props){
-    
+
     return(
       
         <div>

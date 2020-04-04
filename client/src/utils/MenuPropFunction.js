@@ -1,6 +1,6 @@
 import React from 'react';
-import menuItems from "../utils/MainMenuItems";
-import Menu from "./MainNavBar/index";
+import menuItems from "./MainMenuItems";
+import Menu from "../components/MainNavBar/index.js";
 import logo from '../assets/images/sheaRoseLogo.png'
 import "../App.css";
 
@@ -18,6 +18,7 @@ function renderMenuItems(){
                     title={item.title}
                 />
             ))}
+            
             </ul>
         </div>
     )

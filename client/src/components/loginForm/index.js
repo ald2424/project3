@@ -28,7 +28,7 @@ class Login extends Component {
     if (nextProps.auth.isAuthenticated) {
       console.log(nextProps);
       // nextProps.history.push("/dashboard"); // push user to dashboard when they login
-      window.location.replace("/instructordashboard");
+      window.location.replace("/dashboard");
     }
 
     if (nextProps.errors) {

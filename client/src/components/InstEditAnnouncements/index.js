@@ -63,7 +63,7 @@ function InstAnnouncements() {
 
     <div className="formContent flex-container">
       <h1 className="smFonts text-center pb-5">Edit Announcements</h1>
-      <Link to="/instructordashboard" className="btn btn-small waves-effect waves-light hoverable red accent-3"><a href="#!" className="primary-content"><i className="material-icons">arrow_back</i></a> Back to Dashboard</Link>
+      <Link to="/dashboard" className="btn btn-small waves-effect waves-light hoverable red accent-3"><a href="#!" className="primary-content"><i className="material-icons">arrow_back</i></a> Back to Dashboard</Link>
       <div className="row text-center">
         <div className="col-md-4">
 

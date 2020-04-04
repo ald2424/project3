@@ -1,3 +1,4 @@
+
 const menuItems = [
 {
      "path": "/",
@@ -18,6 +19,11 @@ const menuItems = [
     "path": "/horses",
     "href": "MeetTheHorses.js",
     "title": "Meet the Horses"
+},
+{
+    "path": "/contactus",
+    "href": "ContactUs.js",
+    "title": "ContactUs"
 }
 ]
 

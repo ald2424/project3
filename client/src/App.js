@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css"
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -10,26 +11,25 @@ import LoginPage from "./pages/Login";
 import Calendar from "./components/Calendar";
 import StudentForm from "./pages/StudentLogin";
 import InstructorForm from "./pages/InstructorLogin";
-import MainNavBar from "./components/MenuPropFunction";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ViewAnnouncements from "./pages/ViewAnnouncementsPage";
 
+import MainNavBar from "./utils/MenuPropFunction"
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
-
 import { Provider } from "react-redux";
 import store from "./store";
-
-// import Navbar from "./components/layout/Navbar";
-// import Landing from "./components/layout/Landing";
-// import Register from "./components/auth/Register";
-//import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
-import InstructorDashboard from "./components/dashboard/InstructorDashboard.js";
-import StudentDashboard from "./components/dashboard/StudentDashboard";
-import StudentSignUp from "./components/StudentSignUp/studentsignup";
+
+// import InstructorDashboard from "./components/dashboard/InstructorDashboard.js";
+// import StudentDashboard from "./components/dashboard/StudentDashboard";
 import InstEditAnnouncements from "./components/InstEditAnnouncements";
+
+import Dashboard from "./components/dashboard";
+import StudentSignUp from "./components/StudentSignUp/studentsignup";
+import MessageBoard from "./components/MessageBoard";
+import ContactUs from "./components/ContactUs";
 
 //Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -52,20 +52,6 @@ if (localStorage.jwtToken) {
 
 function App() {
   return (
-    // <Provider store={store}>
-    //   <Router>
-    //     <div className="App">
-    //       <Navbar />
-    //       <Route exact path="/" component={Landing} />
-    //       <Route exact path="/register" component={Register} />
-    //       <Route exact path="/login" component={Login} />
-    //       <Switch>
-    //         <PrivateRoute exact path="/dashboard" component={Dashboard} />
-    //       </Switch>
-    //     </div>
-    //   </Router>
-    // </Provider>
-
     <div>
       <Provider store={store}>
         <Router>
@@ -79,13 +65,13 @@ function App() {
               <Route exact path='/login' component={LoginPage} />
               <Route exact path='/studentform' component={StudentForm} />
               <Route exact path='/instructorform' component={InstructorForm} />
+              <Route exact path='/contactus' component={ContactUs} />
 
-              <PrivateRoute exact path="/instructordashboard" component={InstructorDashboard} />
+              <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <PrivateRoute exact path="/studentsignup" component={StudentSignUp} />
               <PrivateRoute exact path="/editAnnouncements" component={InstEditAnnouncements} />
               <PrivateRoute exact path="/viewAnnouncements" component={ViewAnnouncements} />
-              <PrivateRoute exact path="/studentdashboard" component={StudentDashboard} />
-              <PrivateRoute exact path="/studentsignup" component={StudentSignUp} />
-
+              <PrivateRoute exact path="/messageboard" component={MessageBoard} />
             </Switch>
           </div>
         </Router>
@@ -97,5 +83,3 @@ function App() {
 }
 
 export default App;
-
-

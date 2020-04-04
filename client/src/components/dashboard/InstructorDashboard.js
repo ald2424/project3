@@ -21,8 +21,13 @@ class InstructorDashboard extends Component {
       window.location.replace("/editAnnouncements");
   };
 
-    openViewAnnouncements() {
-      window.location.replace("/viewAnnouncements");
+  openViewAnnouncements() {
+    window.location.replace("/viewAnnouncements");
+  };
+
+  openMessageBoard() {
+    window.location.replace("/messageboard");
+    // window.location.reload(false);
   };
 
   render() {
@@ -51,27 +56,13 @@ class InstructorDashboard extends Component {
                 <li className="nav-item">
                   <a className="nav-link text-dark" href="#">Schedule</a>
                 </li>
-                {/* <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Logout</a>
-                </li> */}
-
+                <li className="nav-item">
+                 <button className="nav-link text-dark btn-link" onClick={this.openMessageBoard}>Message Board</button>
+                </li>
                 <li className="nav-item">
                   <button className="nav-link text-dark btn-link" onClick={this.onLogoutClick}>Logout</button>
                 </li>
               </ul>
-           
-            {/* <button
-              style={{
-                width: "150px",
-                borderRadius: "3px",
-                letterSpacing: "1.5px",
-                marginTop: "1rem"
-              }}
-              onClick={this.onLogoutClick}
-              className="btn btn-large waves-effect waves-light hoverable bg-danger font-weight-bold text-light accent-3"
-            >
-              Logout
-            </button> */}
           </div>
         </div>
       </div>
