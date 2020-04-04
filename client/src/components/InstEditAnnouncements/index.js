@@ -10,19 +10,19 @@ import { Link } from 'react-router-dom';
 
 function InstAnnouncements() {
   // Test
-  const [formObject, setFormObject] = useState({title:"", message:""})
+  const [formObject, setFormObject] = useState({ title: "", message: "" })
 
   const [announcements, setAnnouncements] = useState([])
 
-    // Load announcements, store with setAnnouncements
-    useEffect(() => {
-        loadAnnouncements()
-    }, [])
+  // Load announcements, store with setAnnouncements
+  useEffect(() => {
+    loadAnnouncements()
+  }, [])
 
   // Deletes an announcement from database with id, reloads announcements from db
   const deleteAnnouncement = event => {
-    const id=event.target.id
-    API.deleteAnnouncement(id) .then(res => loadAnnouncements())
+    const id = event.target.id
+    API.deleteAnnouncement(id).then(res => loadAnnouncements())
       .catch(err => console.log(err));
   };
 
@@ -34,13 +34,13 @@ function InstAnnouncements() {
 
   function loadAnnouncements() {
     API.getAnnouncements()
-        .then(res =>
-            setAnnouncements(res.data)
-        )
-        .catch(err => console.log(err));
+      .then(res =>
+        setAnnouncements(res.data)
+      )
+      .catch(err => console.log(err));
   };
 
- 
+
 
 
   // When announcement is submitted, use API.saveAnnouncement to save data, reload announcements
@@ -51,10 +51,11 @@ function InstAnnouncements() {
       API.saveAnnouncement({
         title: formObject.title,
         message: formObject.message
-      }) .then(res => loadAnnouncements())
-        .then(res => {setFormObject({title:"", message:""})
-        document.getElementById("message").value = ""
-      })
+      }).then(res => loadAnnouncements())
+        .then(res => {
+          setFormObject({ title: "", message: "" })
+          document.getElementById("message").value = ""
+        })
         .catch(err => console.log(err));
     }
   };
@@ -63,7 +64,7 @@ function InstAnnouncements() {
 
     <div className="formContent flex-container">
       <h1 className="smFonts text-center pb-5">Edit Announcements</h1>
-      <Link to="/dashboard" className="btn btn-small waves-effect waves-light hoverable red accent-3"><a href="#!" className="primary-content"><i className="material-icons">arrow_back</i></a> Back to Dashboard</Link>
+      <Link to="/dashboard" className="btn btn-small waves-effect waves-light hoverable red accent-3" id="dashboardBtn"> Back to Dashboard</Link>
       <div className="row text-center">
         <div className="col-md-4">
 
@@ -90,7 +91,7 @@ function InstAnnouncements() {
         </div>
         <div className="col-md-4">
           {/* Delete Announcements */}
-          
+
           <div className="card">
 
             <div className="card-content">
@@ -99,22 +100,19 @@ function InstAnnouncements() {
 
             <div className="card-tabs">
 
-            {announcements.map((announcement => (
-            
-      
-              <ul className="collection">
-                <li className="collection-item avatar">
-                  <i className="material-icons circle red">edit</i>
-            <span className="title">{announcement.title}</span>
-                  <br></br>
-                  <span className="message">{announcement.message}</span>
-                  <a href="#!" className="secondary-content"><i className="material-icons">close</i></a>
-                </li>
-                <button
-                  type="submit"
-                  className="btn btn-medium waves-effect waves-light hoverable red accent-3" onClick={deleteAnnouncement} id={announcement._id}> Delete
+              {announcements.map((announcement => (
+
+                <ul className="collection">
+                  <li className="collection-item">
+                    <p className="title">{announcement.title}</p>
+                    <br></br>
+                    <p className="message">{announcement.message}</p>
+                  </li>
+                  <button
+                    type="submit"
+                    className="btn btn-medium waves-effect waves-light hoverable red accent-3" onClick={deleteAnnouncement} id={announcement._id}> Delete
                 </button>
-              </ul>
+                </ul>
               )))}
               <br></br>
               <br></br>

@@ -17,13 +17,22 @@
     margin-bottom: 3rem;
 }
 
+#dashboardBtn {
+    margin: 100px;
+}
+
 .secondary-content {
     color: red;
 }
 
 .col-md-4 {
     margin-left: 300px;
-    width: 250px;
+    width: 500px;
+}
+
+.collection {
+    align-content: center;
+    margin-right: 30px;
 }
 
 .card-tabs {
@@ -31,16 +40,24 @@
     margin-left: 75px;
 }
 
+.card {
+    width: 100%;
+    position: relative;
+    margin-left: 100px;
+    /* height: 75vh; */
+}
+
 textarea {
-    width: 250px;
+    width: 80%;
     align-content: center;
-    margin: 0 auto;
+    
+    
 }
 
 input {
-    width: 300px;
+    width: 80%;
     align-content: center;
-    margin: 0 auto;
+    
 }
 
 .smFonts {
