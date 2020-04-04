@@ -1,45 +1,49 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { loginUser } from "../../actions/authActions";
-import classnames from "classnames";
-import MessageResults from "./index";
+import MessageList from "./index";
+import { renderContacts } from "../../actions/authActions";
 
 class MessageResultsContainer extends Component {
-  state = {
-    name: [],
-    email: [],
-    phone: [],
-    message: []
-  };
+  constructor() {
+    super();
+    this.state = {
+      name: [],
+      email: [],
+      phone: [],
+      message: [],
+      date: []
+    };
+  }
 
-//   componentDidMount() {
-//     this.setState({ name: req.data.name }).catch(err => console.log(err));
-//   };
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({
+        errors: nextProps.errors
+      });
+    }
+  }
 
   onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
 
-  
-//   handleButtonSubmit = event => {
-//     event.preventDefault();
-//     this.state.search
-//       .then(res => {
-//         if (res.data.status === "error") {
-//           throw new Error(res.data.message);
-//         }
-//         this.setState({ results: res.data.message, error: "" });
-//       })
-//       .catch(err => this.setState({ error: err.message }));
-//   };
+  onSubmit = e => {
+    e.preventDefault();
 
+    const userData = {
+      name: this.state.name,
+      email: this.state.email,
+      phone: this.state.phone,
+      message: this.state.message,
+      date: this.state.date
+    };
+
+    this.props.renderContacts(userData); // since we handle the redirect within our component, we don't need to pass in this.props.history as a parameter
+  };
 
   render() {
     return (
       <div className="container">
-        <MessageResults results={this.state.results} />
+        <MessageList />
       </div>
     );
   }
