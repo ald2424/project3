@@ -27,6 +27,11 @@ const db = require("./config/keys").mongoURI;
 //   .then(() => console.log("MongoDB successfully connected"))
 //   .catch(err => console.log(err));
 
+// Routes
+app.use("/api/users", users);
+app.use("/api/contacts", contacts);
+app.use("/api/announcements", announcements);
+
 // var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/shearosefarm"
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://dbUser:Passw0rd@ds133418.mlab.com:33418/heroku_s62f6pkg");
@@ -37,11 +42,6 @@ if(process.env.NODE_ENV === "production"){
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   })
 }
-// Routes
-app.use("/api/users", users);
-app.use("/api/contacts", contacts);
-app.use("/api/announcements", announcements);
-
 
 const port = process.env.PORT || 5000; // process.env.port is Heroku's port if you choose to deploy the app there
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));
