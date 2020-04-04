@@ -27,7 +27,7 @@ mongoose
   .catch(err => console.log(err));
 
 // var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/shearosefarm"
-// mongoose.connect(MONGODB_URI);
+mongoose.connect(db);
 // Routes
 app.use("/api/users", users);
 app.use("/api/contacts", contacts);
