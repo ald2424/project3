@@ -1,0 +1,51 @@
+@media all and (min-width: 480px) {
+    .formContainer {
+      padding: 60px 0;
+    }
+  
+    form {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+}
+
+.button {
+    width: 100px;
+    border-radius: 3px;
+    margin-top: 1rem;
+    margin: "15px";
+    margin-bottom: 3rem;
+}
+
+.secondary-content {
+    color: red;
+}
+
+.col-md-4 {
+    margin-left: 300px;
+    width: 250px;
+}
+
+.card-tabs {
+    width: 73.5%;
+    margin-left: 75px;
+}
+
+textarea {
+    width: 250px;
+    align-content: center;
+    margin: 0 auto;
+}
+
+input {
+    width: 300px;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.smFonts {
+    padding-top: 5%;
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    font-style: italic;
+}

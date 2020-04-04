@@ -27,6 +27,21 @@ router.post("/contactus", (req, res) => {
     .catch(({ message }) => {
       console.log(message);
     });
+<<<<<<< HEAD
+=======
+});
+
+router.get("/messageboard", (req,res) => { 
+  Contact.find({})
+  .then(dbContact => {
+    res.json(dbContact);
+  })
+  .catch(err => {
+    res.json(err);
+  });
+})
+
+>>>>>>> 845b181f16b8b0c8a32823becd6de2b70d9aec13
 
   Contact.find({})
     .then(dbContact => {

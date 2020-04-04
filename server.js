@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 
 const users= require("./routes/api/users");
 const contacts= require("./routes/api/contacts");
-
+const announcements = require("./routes/api/announcements");
 
 const app = express();
 // Bodyparser middleware
@@ -29,7 +29,7 @@ mongoose
 // Routes
 app.use("/api/users", users);
 app.use("/api/contacts", contacts);
-
+app.use("/api/announcements", announcements);
 
 
 const port = process.env.PORT || 5000; // process.env.port is Heroku's port if you choose to deploy the app there
