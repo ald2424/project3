@@ -26,7 +26,8 @@ const db = require("./config/keys").mongoURI;
 //   .then(() => console.log("MongoDB successfully connected"))
 //   .catch(err => console.log(err));
 
-
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/shearosefarm"
+mongoose.connect(MONGODB_URI);
 // Routes
 app.use("/api/users", users);
 app.use("/api/contacts", contacts);
