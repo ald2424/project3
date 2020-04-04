@@ -18,14 +18,14 @@ app.use(bodyParser.json());
 // DB Config
 const db = require("./config/keys").mongoURI;
 //Connect to MongoDB
-mongoose
-  .connect(
-   db,
-  //  "mongodb://localhost/shearosefarm",
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log("MongoDB successfully connected"))
-  .catch(err => console.log(err));
+// mongoose
+//   .connect(
+//    db,
+//   //  "mongodb://localhost/shearosefarm",
+//     { useNewUrlParser: true }
+//   )
+//   .then(() => console.log("MongoDB successfully connected"))
+//   .catch(err => console.log(err));
 
 // var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/shearosefarm"
 mongoose.connect(db || "mongodb+srv://dbUser:dbUserPassword@shearosefarm-gsjx6.mongodb.net/test?retryWrites=true&w=majority");
