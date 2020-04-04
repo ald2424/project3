@@ -16,18 +16,18 @@ app.use(
 app.use(bodyParser.json());
 // DB Config
 const db = require("./config/keys").mongoURI;
-// Connect to MongoDB
-// mongoose
-//   .connect(
-//    db,
-//   //  "mongodb://localhost/shearosefarm",
-//     { useNewUrlParser: true }
-//   )
-//   .then(() => console.log("MongoDB successfully connected"))
-//   .catch(err => console.log(err));
+//Connect to MongoDB
+mongoose
+  .connect(
+   db,
+  //  "mongodb://localhost/shearosefarm",
+    { useNewUrlParser: true }
+  )
+  .then(() => console.log("MongoDB successfully connected"))
+  .catch(err => console.log(err));
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/shearosefarm"
-mongoose.connect(MONGODB_URI);
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/shearosefarm"
+// mongoose.connect(MONGODB_URI);
 // Routes
 app.use("/api/users", users);
 app.use("/api/contacts", contacts);
