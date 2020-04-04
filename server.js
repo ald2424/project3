@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const users= require("./routes/api/users");
 const contacts= require("./routes/api/contacts");
 const announcements = require("./routes/api/announcements");
+const path = require('path');
 
 const app = express();
 // Bodyparser middleware
@@ -30,6 +31,10 @@ mongoose
 mongoose.connect(db || "mongodb+srv://dbUser:dbUserPassword@shearosefarm-gsjx6.mongodb.net/test?retryWrites=true&w=majority");
 if(process.env.NODE_ENV === "production"){
   app.use(express.static("client/build"));
+
+  app.get('*', (req, res) =>{
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  })
 }
 // Routes
 app.use("/api/users", users);
