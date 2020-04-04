@@ -8,12 +8,33 @@ import MessageResults from "./index";
 
 class MessageResultsContainer extends Component {
   state = {
-    results: []
+    name: [],
+    email: [],
+    phone: [],
+    message: []
   };
 
-  componentDidMount() {
-    {{ this.state.results; }}
-  }
+//   componentDidMount() {
+//     this.setState({ name: req.data.name }).catch(err => console.log(err));
+//   };
+
+  onChange = e => {
+    this.setState({ [e.target.id]: e.target.value });
+  };
+
+  
+//   handleButtonSubmit = event => {
+//     event.preventDefault();
+//     this.state.search
+//       .then(res => {
+//         if (res.data.status === "error") {
+//           throw new Error(res.data.message);
+//         }
+//         this.setState({ results: res.data.message, error: "" });
+//       })
+//       .catch(err => this.setState({ error: err.message }));
+//   };
+
 
   render() {
     return (

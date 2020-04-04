@@ -27,14 +27,13 @@ router.post("/contactus", (req, res) => {
     .catch(({ message }) => {
       console.log(message);
     });
+
+  Contact.find({})
+    .then(dbContact => {
+      res.json(dbContact);
+    })
+    .catch(err => {
+      res.json(err);
+    });
 });
-
-// Contact.find({})
-//   .then(dbContact => {
-//     res.json(dbContact);
-//   })
-//   .catch(err => {
-//     res.json(err);
-//   });
-
 module.exports = router;
